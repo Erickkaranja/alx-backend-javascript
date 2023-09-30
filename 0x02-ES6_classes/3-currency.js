@@ -5,7 +5,7 @@ export default class Currency {
     }
   }
 
-  get Code () {
+  get Code() {
     return this._code;
   }
 
