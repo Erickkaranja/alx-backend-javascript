@@ -13,7 +13,7 @@ export default class Currency {
   }
 
   set code(code) {
-   if (typeof code !== 'string') {
+    if (typeof code !== 'string') {
       throw new Error("code must be a string");
     }   
  
