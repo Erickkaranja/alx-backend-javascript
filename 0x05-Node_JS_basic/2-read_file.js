@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function findNumberOfStudents (file) {
+function findNumberOfStudents(file) {
   const row = file.split('\n');
   const students = [];
   for (let i = 1; i < row.length; i += 1) {
@@ -12,7 +12,7 @@ function findNumberOfStudents (file) {
   return students;
 }
 
-function groupStudentsPerField (students) {
+function groupStudentsPerField(students) {
   const fields = {};
   let name; let about;
   students.forEach((student) => {
@@ -29,7 +29,7 @@ function groupStudentsPerField (students) {
   });
 }
 
-function countStudents (path) {
+function countStudents(path) {
   if (!fs.existsSync(path)) {
     throw new Error('Cannot load the database');
   }

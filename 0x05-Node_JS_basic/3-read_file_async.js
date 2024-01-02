@@ -1,6 +1,6 @@
 const fs = require('fs').promises;
 
-function findNumberOfStudents (file) {
+function findNumberOfStudents(file) {
   const row = file.split('\n');
   const students = [];
   for (let i = 1; i < row.length; i += 1) {
@@ -11,7 +11,7 @@ function findNumberOfStudents (file) {
   return students;
 }
 
-function groupStudentsPerField (students) {
+function groupStudentsPerField(students) {
   const fields = {};
   let name; let about;
   students.forEach((student) => {
@@ -25,7 +25,7 @@ function groupStudentsPerField (students) {
   return fields;
 }
 
-async function countStudents (path) {
+async function countStudents(path) {
   try {
     const file = await fs.readFile(path, { encoding: 'utf-8' });
     const students = findNumberOfStudents(file);
