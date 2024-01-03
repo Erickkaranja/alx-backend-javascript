@@ -33,7 +33,7 @@ async function countStudents(path) {
     return new Promise((resolve) => {
       let log = `Number of students: ${students.length}`;
       Object.keys(fields).forEach((key) => {
-        log += `\nNumber of students in ${key}: ${fields[key].length}.  List: ${fields[key].join(', ')}`;
+        log += `\nNumber of students in ${key}: ${fields[key].length}. List: ${fields[key].join(', ')}`;
       });
       console.log(log);
       resolve(log);
