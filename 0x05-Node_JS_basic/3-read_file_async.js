@@ -31,10 +31,9 @@ async function countStudents(path) {
     const students = findNumberOfStudents(file);
     const fields = groupStudentsPerField(students);
     return new Promise((resolve) => {
-      let log = `Number of students: ${students.length}\n`;
+      let log = `Number of students: ${students.length}`;
       Object.keys(fields).forEach((key) => {
-        log += `Number of students in ${key}: ${fields[key].length}.`;
-        log += ` List: ${fields[key].join(', ')}\n`;
+        log += `\nNumber of students in ${key}: ${fields[key].length}.  List: ${fields[key].join(', ')}`;
       });
       console.log(log);
       resolve(log);
