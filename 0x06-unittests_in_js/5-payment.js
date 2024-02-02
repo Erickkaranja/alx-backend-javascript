@@ -1,4 +1,4 @@
-const utils = require(./utils)
+const utils = require('./utils')
 
 function sendPaymentRequestToApi(totalAmount, totalShipping) {
   const total = utils.calculateNumber('SUM', totalAmount, totalShipping);

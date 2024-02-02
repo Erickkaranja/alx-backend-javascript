@@ -18,4 +18,3 @@ describe('sendPaymentRequestToApi', () => {
     consoleSpy.restore();
   });
 });
-})
