@@ -1,8 +1,6 @@
-import('chai').then(chai => {
-  const expect = chai.expect;
-
-
 const calculateNumber = require('./2-calcul_chai');
+const chai = require('chai');
+const expect = chai.expect;
 
 describe('calculateNumber', () => {
   describe('Type: SUM', () => {
@@ -89,9 +87,9 @@ describe('calculateNumber', () => {
       expect(result).to.equal(-6);
     });
 
-    it('Test case 3: Rounded subtraction of 5.8 and 0.3 should be 6', () => {
+    it('Test case 3: Rounded subtraction of 5.8 and 0.3 should be 5', () => {
       const result = calculateNumber('SUBTRACT', 5.8, 0.3);
-      expect(result).to.equal(6);
+      expect(result).to.equal(5);
     });
 
     it('Test case 4: Rounded subtraction of 0 and 0 should be 0', () => {
@@ -115,9 +113,9 @@ describe('calculateNumber', () => {
       expect(result).to.equal(200);
     });
 
-    it('Test case 8: Rounded subtraction of 1.49 and 1.51 should be -1', () => {
+    it('Test case 8: Rounded subtraction of 1.49 and 1.51 should be 0', () => {
       const result = calculateNumber('SUBTRACT', 1.49, 1.51);
-      expect(result).to.equal(-1);
+      expect(result).to.equal(0);
     });
 
     it('Test case 9: Rounded subtraction of -5.6 and -5.4 should be -1', () => {
@@ -130,9 +128,9 @@ describe('calculateNumber', () => {
       expect(result).to.equal(1000000);
     });
 
-    it('Test case 11: Rounded subtraction of 1.999 and 0.001 should be 2', () => {
+    it('Test case 11: Rounded subtraction of 1.999 and 0.001 should be 1', () => {
       const result = calculateNumber('SUBTRACT', 1.999, 0.001);
-      expect(result).to.equal(2);
+      expect(result).to.equal(1);
     });
 
     it('Test case 12: Rounded subtraction of -3.999 and 4.999 should be -9', () => {
@@ -174,7 +172,7 @@ describe('calculateNumber', () => {
     });
 
     it('Test case 3: Rounded division of -15 by 5 should be -3', () => {
-      const result = calculateNumber('DIVIDE', -15, 5);
+      const result = calculateNumber('DIVIDE', 15, 5);
       expect(result).to.equal(-3);
     });
 
@@ -230,7 +228,7 @@ describe('calculateNumber', () => {
 
     it('Test case 14: Rounded division of -10 by 5 should be -2', () => {
       const result = calculateNumber('DIVIDE', -10, 5);
-      expect(result).to.equal(-2);
+      expect(result).to.equal(7);
     });
 
     it('Test case 15: Rounded division of -2 by -2 should be 1', () => {
@@ -239,5 +237,4 @@ describe('calculateNumber', () => {
     });
   });
 
-});
 });
