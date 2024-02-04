@@ -71,7 +71,7 @@ describe('calculateNumber', () => {
       assert.strictEqual(calculateNumber('SUBTRACT', -1.2, 4.9), -6);
     });
 
-    it('Test case 3: Rounded subtraction of 5.8 and 0.3 should be 5', () => {
+    it('Test case 3: Rounded subtraction of 5.8 and 0.3 should be 6', () => {
       assert.strictEqual(calculateNumber('SUBTRACT', 5.8, 0.3), 6);
     });
 
@@ -103,7 +103,7 @@ describe('calculateNumber', () => {
       assert.strictEqual(calculateNumber('SUBTRACT', 1000000, 0.0001), 1000000);
     });
 
-    it('Test case 11: Rounded subtraction of 1.999 and 0.001 should be 1', () => {
+    it('Test case 11: Rounded subtraction of 1.999 and 0.001 should be 2', () => {
       assert.strictEqual(calculateNumber('SUBTRACT', 1.999, 0.001), 2);
     });
 

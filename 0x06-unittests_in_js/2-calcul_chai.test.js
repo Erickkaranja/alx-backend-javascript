@@ -1,6 +1,6 @@
-const calculateNumber = require('./2-calcul_chai');
-const chai = require('chai');
-const expect = chai.expect;
+import('chai').then(chai => {
+  const expect = chai.expect;
+  const calculateNumber = require('./2-calcul_chai');
 
 describe('calculateNumber', () => {
   describe('Type: SUM', () => {
@@ -172,7 +172,7 @@ describe('calculateNumber', () => {
     });
 
     it('Test case 3: Rounded division of -15 by 5 should be -3', () => {
-      const result = calculateNumber('DIVIDE', 15, 5);
+      const result = calculateNumber('DIVIDE', -15, 5);
       expect(result).to.equal(-3);
     });
 
@@ -237,4 +237,5 @@ describe('calculateNumber', () => {
     });
   });
 
+});
 });

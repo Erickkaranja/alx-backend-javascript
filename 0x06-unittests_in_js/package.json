@@ -4,7 +4,7 @@
   "description": "starting on unittests in node js using mocha",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha *test.js"
   },
   "author": "Erick Karanja",
   "license": "ISC",
