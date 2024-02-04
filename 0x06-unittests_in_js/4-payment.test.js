@@ -14,7 +14,7 @@ describe('sendPaymentRequestToApi', () => {
     sendPaymentRequestToApi(100, 20);
 
     assert(calculateNumberStub.calledWithExactly('SUM', 100, 20));
-
+    assert.calledWith(consoleSpy, 'The total is: 231');
     assert(consoleLogSpy.calledWithExactly('The total is: 10'));
 
     calculateNumberStub.restore();
